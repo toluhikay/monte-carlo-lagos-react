@@ -2,7 +2,7 @@ import React from "react";
 import Front from "../assets/images/Front1.jpg";
 import Layout1 from "../assets/images/layout1.jpeg";
 import Layout from "../assets/images/layout.jpeg";
-import { yellowColor, redColor, commonStyle, blurCOlor } from "../common/commonStyles";
+import { yellowColor, redColor, commonStyle } from "../common/commonStyles";
 import { ACTIONBUTTONS } from "../constants/constant";
 import { MdOutlineNavigateNext } from "react-icons/md";
 
