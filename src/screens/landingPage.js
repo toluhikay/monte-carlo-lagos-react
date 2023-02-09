@@ -7,6 +7,7 @@ import ThreePictures from "../components/threePictures";
 import Map from "../components/map";
 import Banner from "../components/banner";
 import ClusterImages from "../components/clusterImages";
+import Footer from "../components/footer";
 
 const LandingPage = () => {
   return (
@@ -19,6 +20,7 @@ const LandingPage = () => {
       <Map />
       <Banner />
       <ClusterImages />
+      <Footer />
     </div>
   );
 };
