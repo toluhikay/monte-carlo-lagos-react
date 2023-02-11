@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link, Outlet } from "react-router-dom";
 import MonteCarloLogo from "../assets/images/White.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { commonStyle } from "../common/commonStyles";
@@ -16,7 +17,9 @@ const Header = () => {
     <Fragment>
       <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
         <div className="flex justify-between md:w-auto w-full items-center">
-          <img src={MonteCarloLogo} className="lg:w-[250px] md:w-[200px] w-[150px]" alt="" />
+          <Link to={"/"}>
+            <img src={MonteCarloLogo} className="lg:w-[250px] md:w-[200px] w-[150px]" alt="" />
+          </Link>
           <div className="md:hidden" onClick={() => setOpenNav(!openNav)}>
             <GiHamburgerMenu className="text-3xl" />
           </div>
@@ -35,6 +38,7 @@ const Header = () => {
           </ul>
         </nav>
       </header>
+      <Outlet />
     </Fragment>
   );
 };

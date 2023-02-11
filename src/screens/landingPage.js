@@ -12,7 +12,6 @@ import Footer from "../components/footer";
 const LandingPage = () => {
   return (
     <div>
-      <Header></Header>
       <Hero />
       <MonteCarloSection />
       <MonteCarloLagos />

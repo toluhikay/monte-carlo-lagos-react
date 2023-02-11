@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Front from "../assets/images/Front1.jpg";
 import Layout1 from "../assets/images/layout1.jpeg";
 import Layout from "../assets/images/layout.jpeg";
@@ -7,6 +8,7 @@ import { ACTIONBUTTONS } from "../constants/constant";
 import { MdOutlineNavigateNext } from "react-icons/md";
 
 const MonteCarloSection = () => {
+  const navigate = useNavigate();
   return (
     <div className={`md:py-28 py-16 ${commonStyle} bg-[#c4c4c450]`}>
       <p className={`md:text-5xl mb-12 mt-12 text-3xl font-bold text-[${redColor}] text-center`}>
@@ -26,7 +28,15 @@ const MonteCarloSection = () => {
         <div className="w-full flex flex-wrap justify-between mt-12">
           {ACTIONBUTTONS.map((item, index) => {
             return (
-              <button key={index} className={`md:w-[23%] w-[48%] md:mb-0 mb-6 bg-[${redColor}] flex text-sm justify-center hover:bg-[#e9a921]  items-center capitalize text-white cursor-pointer py-4`}>
+              <button
+                key={index}
+                className={`md:w-[23%] w-[48%] md:mb-0 mb-6 bg-[${redColor}] flex text-sm justify-center hover:bg-[#e9a921]  items-center capitalize text-white cursor-pointer py-4`}
+                onClick={() => {
+                  if (item.link) {
+                    navigate(item.link);
+                  }
+                }}
+              >
                 {item.action} <MdOutlineNavigateNext className="text-xl" />
               </button>
             );
