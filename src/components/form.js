@@ -7,20 +7,20 @@ import CustomFormInput from "../formInputs/CustomFormInput";
 
 const Form = () => {
   return (
-    <div className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat bg-cover bg-center bg-blend-darken bg-black/70 md:py-28 py-12 flex justify-center items-center`}>
+    <div className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat bg-cover bg-center bg-blend-darken bg-black/70 md:py-28 pt-12 flex justify-center items-center`}>
       <div className={`bg-[#fafafa] w-[600px] h-full overflow-auto`}>
         <div className="w-full flex flex-col justify-center items-center py-2">
           <img src={Red} alt="" className="w-[100px] h-[100px]" />
-          <p className={`text-[${redColor}] mt-3 font-bold tracking-wider text-xl`}>
+          <p className={`text-[${redColor}] mt-3 font-bold md:text-xl text-sm tracking-wider text-center`}>
             Mufasa <span className={`text-[${yellowColor}]`}>Apartments Subscription </span>Form
           </p>
-          <p className="font-bold text-red-700">
-            Instructions: <span className="text-black font-light">Please read carefully before inputing any information</span>
+          <p className="font-bold md:text-base text-xs mt-2 text-red-700">
+            Instructions: <span className="text-black font-light text-center mb-2">Please read carefully before inputing any information</span>
           </p>
           <ul></ul>
         </div>
-        <form action="">
-          <div className="px-6 md:h-[500px] h-[550px] overflow-auto">
+        <form action="" className="py-6">
+          <div className="px-6 md:h-[500px] overflow-auto">
             <CustomFormSelect selectOptions={titleData} label="Title" id="title" />
             <CustomFormInput type={"text"} label="Full Name" id={"full_name"} />
             <CustomFormInput type={"text"} label="Nationality" id={"nationality"} />
