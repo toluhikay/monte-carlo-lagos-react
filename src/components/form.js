@@ -7,7 +7,7 @@ import CustomFormInput from "../formInputs/CustomFormInput";
 
 const Form = () => {
   return (
-    <div className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat bg-cover bg-center bg-blend-darken bg-black/70 md:py-28 pt-12 flex justify-center items-center`}>
+    <div className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat bg-cover bg-center bg-blend-darken bg-black/70 lg:py-28 md:py-12 pt-12 flex justify-center items-center`}>
       <div className={`bg-[#fafafa] w-[600px] h-full overflow-auto`}>
         <div className="w-full flex flex-col justify-center items-center py-2">
           <img src={Red} alt="" className="w-[100px] h-[100px]" />
@@ -20,8 +20,9 @@ const Form = () => {
           <ul></ul>
         </div>
         <form action="" className="py-6">
-          <div className="px-6 md:h-[500px] overflow-auto">
+          <div className="px-6 lg:h-[450px] md:h-[500px] overflow-auto">
             <CustomFormSelect selectOptions={titleData} label="Title" id="title" />
+            <CustomFormInput type={"file"} label="Full Name" id={"full_name"} />
             <CustomFormInput type={"text"} label="Full Name" id={"full_name"} />
             <CustomFormInput type={"text"} label="Nationality" id={"nationality"} />
             <CustomFormInput type={"text"} label="Country of Residence" id={"country_of_residence"} />
