@@ -18,7 +18,6 @@ const LandingPage = () => {
       <Map />
       <Banner />
       <ClusterImages />
-      <Footer />
     </div>
   );
 };

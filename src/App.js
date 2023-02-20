@@ -5,6 +5,8 @@ import Header from "./components/header";
 import Form from "./components/form";
 import TagManager from "react-gtm-module";
 import Blog from "./components/blog";
+import Footer from "./components/footer";
+import SingleBlog from "./components/singleBlog";
 
 function App() {
   const tagManagerArgs = {
@@ -18,8 +20,10 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="/subscriptionForm" element={<Form />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/post" element={<SingleBlog />} />
         </Route>
       </Routes>
+      <Footer />
     </Fragment>
   );
 }
