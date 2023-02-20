@@ -6,10 +6,10 @@ import { commonStyle } from "../common/commonStyles";
 
 const Header = () => {
   const Links = [
-    { id: 1, link: "home", url: "" },
-    { id: 2, link: "about", url: "" },
-    { id: 3, link: "blog", url: "" },
-    { id: 4, link: "+2349155170650", url: "" },
+    { id: 1, link: "home", url: "https://adozillionhomesng.com/#start-booking-calendar" },
+    { id: 2, link: "about", url: "https://adozillionhomesng.com/about/#start-booking-calendar" },
+    { id: 3, link: "blog", to: "/blog" },
+    { id: 4, link: "+2349155170650", url: "tel:+2349155170650" },
   ];
   const [openNav, setOpenNav] = useState(false);
 
@@ -29,9 +29,15 @@ const Header = () => {
             {Links.map((item) => {
               return (
                 <li key={item.id}>
-                  <a target="_blank" rel="noreferrer" className="capitalize hover:text-[#e9a92e] text-base" href={item.url}>
-                    {item.link}
-                  </a>
+                  {item.url ? (
+                    <a target={item.link === "+2349155170650" ? "" : "_blank"} rel="noreferrer" className="capitalize hover:text-[#e9a92e] text-base" href={item.url}>
+                      {item.link}
+                    </a>
+                  ) : (
+                    <Link className="capitalize cursor-pointer hover:text-[#e9a92e] text-base" to={item.to}>
+                      <p className="cursor-pointer">{item.link}</p>
+                    </Link>
+                  )}
                 </li>
               );
             })}

@@ -1,11 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Red from "../assets/images/Red.png";
 import { redColor, yellowColor } from "../common/commonStyles";
 import CustomFormSelect from "../formInputs/CustomFormSelect";
 import { titleData, maritalStatusData, meansOfId, getToKnow, plotType, paymentPlans, plotSize, commenceDevelopment, sourceOfFund } from "../formData/formData";
 import CustomFormInput from "../formInputs/CustomFormInput";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Form = () => {
+  const navigate = useNavigate();
+  const [state, handleSubmit] = useForm("xyyaenzj");
+  if (state.succeeded) {
+    return (
+      <p className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat flex-col bg-cover bg-center bg-blend-darken bg-black/70 lg:py-28 md:py-12 pt-12 flex justify-center items-center text-white`}>
+        {" "}
+        <img src={Red} alt="" className="w-[200px] mb-20 rounded-full bg-white" />
+        <p className="py-6 px-6 bg-white text-center mb-20 text-red-600 rounded-3xl">Thank you for subscribing, we will get back to you in earnest!!!</p>
+        <button onClick={() => navigate("/")} className="bg-white text-red-600 rounded-lg text-xl py-2 px-6">
+          Continue
+        </button>
+      </p>
+    );
+  }
+
   return (
     <div className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat bg-cover bg-center bg-blend-darken bg-black/70 lg:py-28 md:py-12 pt-12 flex justify-center items-center`}>
       <div className={`bg-[#fafafa] w-[600px] h-full overflow-auto`}>
@@ -19,10 +36,10 @@ const Form = () => {
           </p>
           <ul></ul>
         </div>
-        <form action="" className="py-6">
+        <form action="" className="py-6" onSubmit={handleSubmit}>
           <div className="px-6 lg:h-[450px] md:h-[500px] overflow-auto">
             <CustomFormSelect selectOptions={titleData} label="Title" id="title" />
-            <CustomFormInput type={"file"} label="Full Name" id={"full_name"} />
+            <CustomFormInput type={"file"} label="Image" id={"upload"} accept="image/png, image/jpeg" />
             <CustomFormInput type={"text"} label="Full Name" id={"full_name"} />
             <CustomFormInput type={"text"} label="Nationality" id={"nationality"} />
             <CustomFormInput type={"text"} label="Country of Residence" id={"country_of_residence"} />
@@ -54,7 +71,9 @@ const Form = () => {
             <CustomFormSelect selectOptions={sourceOfFund} label="Source of Fund" id="commence_development" />
           </div>
           <div className="w-full flex justify-center items-center mt-3">
-            <button className="bg-red-700 text-white py-2 w-1/2 hover:bg-[#e9a92e] cursor-pointer">Submit</button>
+            <button className="bg-red-700 text-white py-2 w-1/2 hover:bg-[#e9a92e] cursor-pointer" type="submit" disabled={state.submitting}>
+              Submit
+            </button>
           </div>
         </form>
       </div>

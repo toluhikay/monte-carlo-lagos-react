@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Front from "../assets/images/Front1.jpg";
 import Layout1 from "../assets/images/layout1.jpeg";
+import Valentine from "../assets/images/ValentineMC.jpg";
 import Layout from "../assets/images/layout.jpeg";
 import { yellowColor, redColor, commonStyle } from "../common/commonStyles";
 import { ACTIONBUTTONS } from "../constants/constant";
@@ -22,7 +23,7 @@ const MonteCarloSection = () => {
           Monte <span className={`text-[${redColor}]`}>Carlo Layout</span>
         </p>
         <div className={`w-full flex md:flex-row flex-col items-center justify-between`}>
-          <img src={Layout1} className="md:w-[48%] w-[80%] md:mb-0 mb-12" alt="" />
+          <img src={Valentine} className="md:w-[48%] w-[80%] md:mb-0 mb-12" alt="" />
           <img src={Layout} className="md:w-[48%] w-[80%] " alt="" />
         </div>
         <div className="w-full flex flex-wrap justify-between mt-12">
