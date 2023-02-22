@@ -34,10 +34,12 @@ const SchduleModal = () => {
   }
 
   return ReactDom.createPortal(
-    <div className={`fixed transition-all z-[9900yar]  top-0 bottom-0 ${scheduleModalOpen ? "right-0" : "right-[-100%]"}  w-full h-full flex items-end flex-col justify-center`}>
-      <AiFillCloseSquare className={`absolute top-6 right-6 z-[30000] text-3xl text-[${redColor}]`} onClick={() => dispatch(CloseScheduleModal())} />
+    <div className={`fixed transition-all z-[9900]  top-0 bottom-0 ${scheduleModalOpen ? "right-0" : "right-[-100%]"}  w-full h-full flex items-end flex-col justify-center`}>
       <div className="absolute w-full h-full z-[10000]  bg-black/30" onClick={() => dispatch(CloseScheduleModal())}></div>
-      <div className="md:w-[500px] w-full min-h-full bg-[#fbfbfb] overflow-auto md:pt-0 pt-[100px] px-6 z-[20000] flex flex-col justify-around text-center">
+      <div className="md:w-[500px] w-full min-h-full bg-[#fbfbfb] overflow-auto md:pt-0 px-6 z-[20000] flex flex-col  text-center">
+        <div className="flex justify-end items-end py-9">
+          <AiFillCloseSquare className={`z-[30000] text-3xl text-[${redColor}]`} onClick={() => dispatch(CloseScheduleModal())} />
+        </div>
         <p className={`text-[${yellowColor}] italic font-extralight text-2xl`}>
           We are very pleased <span className={`text-[${redColor}]`}>to have you here and we will show you</span> around with utmost delight
         </p>
