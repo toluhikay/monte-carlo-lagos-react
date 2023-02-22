@@ -1,4 +1,6 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./screens/landingPage";
 import Header from "./components/header";
@@ -9,6 +11,9 @@ import Footer from "./components/footer";
 import SingleBlog from "./components/singleBlog";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const tagManagerArgs = {
     gtmId: "UA-257052488-1",
   };

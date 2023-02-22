@@ -28,7 +28,7 @@ const Blog = () => {
             );
           })}
         </p>
-        <p className="tracking-wider mb-6">{BlogJson[0].post.post1.slice(0, 500)}......</p>
+        <p className="tracking-wider mb-6" dangerouslySetInnerHTML={{ __html: BlogJson[0].post.post1.slice(0, 500) }} />
         <button className="border border-[#c31516] py-2 px-[10px] flex items-center text-[#e9a92e] uppercase tracking-widest" onClick={() => navigate("/blog/post")}>
           Read More <BsArrowRight />
         </button>

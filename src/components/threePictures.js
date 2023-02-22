@@ -16,7 +16,7 @@ const ThreePictures = () => {
       <div className="flex justify-between flex-wrap">
         {ImagesArray.map((item) => {
           return (
-            <div key={item.id} className={`md:w-[32%] w-full md:mb-0 mb-12 border-[10px] rounded-lg`}>
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" key={item.id} className={`md:w-[32%] w-full md:mb-0 mb-12 border-[10px] rounded-lg`}>
               <img src={item.img} alt="" />
             </div>
           );

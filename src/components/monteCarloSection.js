@@ -16,15 +16,15 @@ const MonteCarloSection = () => {
         Monte Carlo <span className={`text-[${yellowColor}]`}>Lagos</span>
       </p>
       <div className="w-full flex justify-center items-center mb-12">
-        <img src={Front} alt="" className="md:w-[40%] w-[80%]" />
+        <img data-aos="zoom-out-up" data-aos-duration="2000" src={Front} alt="" className="md:w-[40%] w-[80%]" />
       </div>
       <div className={`flex items-center flex-col py-12`}>
         <p className={`py-6 font-bold md:text-3xl mb-12 text-[${yellowColor}] text-2xl`}>
           Monte <span className={`text-[${redColor}]`}>Carlo Layout</span>
         </p>
         <div className={`w-full flex md:flex-row flex-col items-center justify-between`}>
-          <img src={Valentine} className="md:w-[48%] w-[80%] md:mb-0 mb-12" alt="" />
-          <img src={Layout} className="md:w-[48%] w-[80%] " alt="" />
+          <img data-aos="fade-right" data-aos-duration="1000" src={Valentine} className="md:w-[48%] w-[80%] md:mb-0 mb-12" alt="" />
+          <img data-aos="fade-left" data-aos-duration="1000" src={Layout} className="md:w-[48%] w-[80%] " alt="" />
         </div>
         <div className="w-full flex flex-wrap justify-between mt-12">
           {ACTIONBUTTONS.map((item, index) => {

@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
+      <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full z-[50000000]  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
         <div className="flex justify-between md:w-auto w-full items-center">
           <Link to={"/"}>
             <img src={MonteCarloLogo} className="lg:w-[250px] md:w-[200px] w-[150px]" alt="" />
