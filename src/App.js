@@ -1,6 +1,4 @@
 import { Fragment, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Routes, Route } from "react-router-dom";
 import LandingPage from "./screens/landingPage";
 import Header from "./components/header";
@@ -9,6 +7,8 @@ import TagManager from "react-gtm-module";
 import Blog from "./components/blog";
 import Footer from "./components/footer";
 import SingleBlog from "./components/singleBlog";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   useEffect(() => {

@@ -18,17 +18,17 @@ const Blog = () => {
         <div className={`w-full`}>
           <img src={BlogJson[0].img} className="w-full mb-6" alt="" />
         </div>
-        <p className="mb-6 flex flex-wrap">
+        <div className="mb-6 flex flex-wrap">
           {BlogJson[0].tags.map((item, index) => {
             return (
               <p key={index} className={`uppercase font-bold mr-5 flex items-center  md:text-xl text-sm ${index % 2 === 0 ? "text-[#c31516]" : "text-[#e9a92e]"}`}>
                 {item.tag}
-                <p className={`h-2 w-2 rounded-full ml-2 ${index % 2 === 0 ? "bg-[#c31516]" : "bg-[#e9a92e]"}`}></p>
+                <span className={`h-2 w-2 rounded-full ml-2 ${index % 2 === 0 ? "bg-[#c31516]" : "bg-[#e9a92e]"}`}></span>
               </p>
             );
           })}
-        </p>
-        <p className="tracking-wider mb-6" dangerouslySetInnerHTML={{ __html: BlogJson[0].post.post1.slice(0, 500) }} />
+        </div>
+        <div className="tracking-wider mb-6" dangerouslySetInnerHTML={{ __html: BlogJson[0].post.post1.slice(0, 500) }} />
         <button className="border border-[#c31516] py-2 px-[10px] flex items-center text-[#e9a92e] uppercase tracking-widest" onClick={() => navigate("/blog/post")}>
           Read More <BsArrowRight />
         </button>

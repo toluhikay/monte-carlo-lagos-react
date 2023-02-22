@@ -15,9 +15,9 @@ const Header = () => {
 
   return (
     <Fragment>
-      <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full z-[50000000]  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
+      <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
         <div className="flex justify-between md:w-auto w-full items-center">
-          <Link to={"/"}>
+          <Link to={"/"} onClick={() => setOpenNav(false)}>
             <img src={MonteCarloLogo} className="lg:w-[250px] md:w-[200px] w-[150px]" alt="" />
           </Link>
           <div className="md:hidden" onClick={() => setOpenNav(!openNav)}>
@@ -30,11 +30,11 @@ const Header = () => {
               return (
                 <li key={item.id}>
                   {item.url ? (
-                    <a target={item.link === "+2349155170650" ? "" : "_blank"} rel="noreferrer" className="capitalize hover:text-[#e9a92e] text-base" href={item.url}>
+                    <a target={item.link === "+2349155170650" ? "" : "_blank"} rel="noreferrer" className="capitalize hover:text-[#e9a92e] text-base" href={item.url} onClick={() => setOpenNav(!openNav)}>
                       {item.link}
                     </a>
                   ) : (
-                    <Link className="capitalize cursor-pointer hover:text-[#e9a92e] text-base" to={item.to}>
+                    <Link className="capitalize cursor-pointer hover:text-[#e9a92e] text-base" to={item.to} onClick={() => setOpenNav(!openNav)}>
                       <p className="cursor-pointer">{item.link}</p>
                     </Link>
                   )}
