@@ -7,9 +7,11 @@ import Layout from "../assets/images/layout.jpeg";
 import { yellowColor, redColor, commonStyle } from "../common/commonStyles";
 import { ACTIONBUTTONS } from "../constants/constant";
 import { MdOutlineNavigateNext } from "react-icons/md";
+import { useDispatch } from "react-redux";
 
 const MonteCarloSection = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className={`md:py-28 py-16 ${commonStyle} bg-[#c4c4c450]`}>
       <p className={`md:text-5xl mb-12 mt-12 text-3xl font-bold text-[${redColor}] text-center`}>
@@ -35,6 +37,9 @@ const MonteCarloSection = () => {
                 onClick={() => {
                   if (item.link) {
                     navigate(item.link);
+                  }
+                  if (item.fn) {
+                    dispatch(item.fn);
                   }
                 }}
               >

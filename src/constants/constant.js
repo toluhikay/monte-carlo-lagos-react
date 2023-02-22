@@ -2,11 +2,12 @@ import { GiSpikedFence, GiSolarPower, GiPowerLightning, GiCctvCamera, GiShop, Gi
 import { FaChild } from "react-icons/fa";
 import { MdLandscape } from "react-icons/md";
 import { TbBeachOff } from "react-icons/tb";
+import { OpenScheduleModal } from "../features/scheduleSlice";
 
 export const ACTIONBUTTONS = [
   { id: 1, action: "access brochure" },
   { id: 1, action: "subscription form", link: "/subscriptionForm" },
-  { id: 1, action: "schedule inspection" },
+  { id: 1, action: "schedule inspection", fn: OpenScheduleModal() },
   { id: 1, action: "payment plans" },
 ];
 
