@@ -6,7 +6,13 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import TagManager from "react-gtm-module";
 
+const tagManagerArgs = {
+  gtmId: "UA-257052488-1",
+};
+
+TagManager.initialize(tagManagerArgs);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

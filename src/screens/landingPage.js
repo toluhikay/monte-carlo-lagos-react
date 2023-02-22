@@ -6,10 +6,15 @@ import ThreePictures from "../components/threePictures";
 import Map from "../components/map";
 import Banner from "../components/banner";
 import ClusterImages from "../components/clusterImages";
+import { Helmet } from "react-helmet-async";
 
 const LandingPage = () => {
   return (
     <div className="">
+      <Helmet>
+        <meta name="description" content="Beginner friendly page for learning React Helmet." />
+      </Helmet>
+
       <Hero />
       <MonteCarloSection />
       <MonteCarloLagos />
