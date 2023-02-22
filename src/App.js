@@ -13,6 +13,7 @@ import SingleBlog from "./components/singleBlog";
 function App() {
   useEffect(() => {
     AOS.init();
+    AOS.refresh();
   }, []);
   const tagManagerArgs = {
     gtmId: "UA-257052488-1",
