@@ -1,7 +1,7 @@
 import React from "react";
 import Red from "../assets/images/Red.png";
 import { useNavigate } from "react-router-dom";
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import ReactDom from "react-dom";
 import { redColor, yellowColor } from "./commonStyles";
 import { AiFillCloseSquare } from "react-icons/ai";
@@ -35,12 +35,12 @@ const SchduleModal = () => {
 
   return ReactDom.createPortal(
     <div className={`fixed transition-all z-[9900]  top-0 bottom-0 ${scheduleModalOpen ? "right-0" : "right-[-100%]"}  w-full h-full flex items-end flex-col justify-center`}>
-      <div className="absolute w-full h-full z-[10000]  bg-black/30" onClick={() => dispatch(CloseScheduleModal())}></div>
+      <div className="fixed w-full h-full z-[10000]  bg-black/30" onClick={() => dispatch(CloseScheduleModal())}></div>
       <div className="md:w-[500px] w-full min-h-full bg-[#fbfbfb] overflow-auto md:pt-0 px-6 z-[20000] flex flex-col  text-center">
         <div className="flex justify-end items-end py-9">
           <AiFillCloseSquare className={`z-[30000] text-3xl text-[${redColor}]`} onClick={() => dispatch(CloseScheduleModal())} />
         </div>
-        <p className={`text-[${yellowColor}] italic font-extralight text-2xl`}>
+        <p className={`text-[${yellowColor}] italic font-extralight md:text-2xl text-base`}>
           We are very pleased <span className={`text-[${redColor}]`}>to have you here and we will show you</span> around with utmost delight
         </p>
         <form onSubmit={handleSubmit}>
