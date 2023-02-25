@@ -12,7 +12,7 @@ const LandingPage = () => {
   return (
     <div className="">
       <Helmet>
-        <meta name="description" content="Beginner friendly page for learning React Helmet." />
+        <meta name="Monte Carlo Lagos" content="Beachfront, Real estate, Epe, Estates, Resort, Residences" />
       </Helmet>
 
       <Hero />

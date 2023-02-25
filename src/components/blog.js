@@ -10,7 +10,7 @@ const Blog = () => {
 
   return (
     <div className="min-h-[700px] flex flex-col justify-center items-center md:py-[150px] py-[100px]">
-      <SEO title="Monte Carlo Blog" description="Beachfront, Real estate, Epe, Estates, Resort, Residences" name="Adozillion Homes" type="article" />
+      <SEO title="Adozillion Homes Unveils Monte Carlo Lagos" description="Beachfront, Real estate, Epe, Estates, Resort, Residences" name="Adozillion Homes" type="article" />
       <div className="w-[70%] flex flex-col items-center">
         <p className={`text-[${yellowColor}] italic text-3xl capitalize pb-6 text-center`}>{BlogJson[0].title.toLowerCase()}</p>
         <p className="pb-6 font-extrabold text-[10px]">

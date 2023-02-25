@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import TagManager from "react-gtm-module";
 
 const tagManagerArgs = {
@@ -18,7 +19,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <App />
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
       </BrowserRouter>
     </Provider>
   </React.StrictMode>

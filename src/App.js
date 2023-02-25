@@ -9,8 +9,10 @@ import Footer from "./components/footer";
 import SingleBlog from "./components/singleBlog";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { HelmetProvider } from "react-helmet-async";
+import PictureModal from "./components/PictureModal";
 import SEO from "./common/seo";
+import ScrollToTop from "./ScrollToTop";
+import DownloadBrochureModal from "./components/downloadModal";
 
 function App() {
   useEffect(() => {
@@ -22,12 +24,12 @@ function App() {
   };
   TagManager.initialize(tagManagerArgs);
 
-  const helmetContext = {};
-
   return (
-    <HelmetProvider context={helmetContext}>
+    <ScrollToTop>
       <div className=" w-full scroll-smooth overflow-hidden">
-        <SEO title="Monte Carlo Lagos!" description="Monte Carlo Lagos" name="Adozillion Homes" type="website" />
+        <PictureModal />
+        <DownloadBrochureModal />
+        <SEO title="Monte Carlo Lagos!" description="A " name="Adozillion Homes" type="website" />
         <Routes>
           <Route path="/" element={<Header />}>
             <Route index element={<LandingPage />} />
@@ -38,7 +40,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </HelmetProvider>
+    </ScrollToTop>
   );
 }
 

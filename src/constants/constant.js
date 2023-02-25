@@ -3,12 +3,14 @@ import { FaChild } from "react-icons/fa";
 import { MdLandscape } from "react-icons/md";
 import { TbBeachOff } from "react-icons/tb";
 import { OpenScheduleModal } from "../features/scheduleSlice";
+import PaymentPlan from "../assets/images/payments.webp";
+import { SetModalOpen } from "../features/downloadBrochureSlice";
 
 export const ACTIONBUTTONS = [
-  { id: 1, action: "access brochure" },
+  { id: 1, action: "access brochure", fn: SetModalOpen() },
   { id: 1, action: "subscription form", link: "/subscriptionForm" },
   { id: 1, action: "schedule inspection", fn: OpenScheduleModal() },
-  { id: 1, action: "payment plans" },
+  { id: 1, action: "payment plans", img: PaymentPlan },
 ];
 
 export const FEATURESARRAY = [
