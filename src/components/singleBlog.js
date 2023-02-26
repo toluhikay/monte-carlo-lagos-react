@@ -1,10 +1,16 @@
 import React from "react";
 import { yellowColor, redColor } from "../common/commonStyles";
 import { BlogJson } from "../common/blogsJson";
+import { Helmet } from "react-helmet-async";
 
 const SingleBlog = () => {
   return (
     <div className="min-h-[700px] flex flex-col justify-center items-center md:py-[150px] py-[100px]">
+      <Helmet prioritizeSeoTags>
+        <title>ADOZILLION HOMES UNVEILS MONTE CARLO LAGOS</title>
+        <meta name="description" content="ADOZILLION HOMES UNVEILS MONTE CARLO LAGOS" />
+        <link rel="canonical" href="/blog/post" />
+      </Helmet>
       <div className="md:w-[50%] w-[80%] flex flex-col items-center">
         <p className={`text-[${yellowColor}] italic md:text-3xl text-2xl capitalize pb-6 text-center`}>{BlogJson[0].title.toLowerCase()}</p>
         <p className="pb-6 font-extrabold text-[10px]">

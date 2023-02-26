@@ -14,7 +14,6 @@ import SEO from "./common/seo";
 import ScrollToTop from "./ScrollToTop";
 import DownloadBrochureModal from "./components/downloadModal";
 import { HelmetProvider } from "react-helmet-async";
-import { renderToString } from "react-dom/server";
 
 function App() {
   useEffect(() => {

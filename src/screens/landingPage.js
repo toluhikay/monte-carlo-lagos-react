@@ -11,8 +11,10 @@ import { Helmet } from "react-helmet-async";
 const LandingPage = () => {
   return (
     <div className="">
-      <Helmet>
+      <Helmet prioritizeSeoTags>
+        <title>Monte Carlo Lagos</title>
         <meta name="Monte Carlo Lagos" content="Beachfront, Real estate, Epe, Estates, Resort, Residences" />
+        <link rel="canonical" href="/" />
       </Helmet>
 
       <Hero />

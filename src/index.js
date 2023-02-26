@@ -6,7 +6,6 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import { BrowserRouter } from "react-router-dom";
 import TagManager from "react-gtm-module";
-import { hydrate, render } from "react-dom";
 
 const tagManagerArgs = {
   gtmId: "UA-257052488-1",
@@ -23,11 +22,6 @@ root.render(
     </Provider>
   </React.StrictMode>
 );
-if (root.hasChildNodes()) {
-  hydrate(<App />, root);
-} else {
-  render(<App />, root);
-}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

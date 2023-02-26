@@ -50,7 +50,7 @@ const Footer = () => {
           <p className="mb-3 font-bold">Let's stay in touch</p>
           <form className="flex items-center mb-5">
             <input type="email" className="p-2 sm:text-base text-black text-xs outline-none" required placeholder="enter your email" />
-            <button className="bg-red-800 sm:text-base text-xs p-2" type="submit">
+            <button className="bg-red-800 sm:text-base text-xs p-2" type="submit" disabled>
               Subscribe
             </button>
           </form>
