@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Red from "../assets/images/Red.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "@formspree/react";
@@ -13,23 +13,30 @@ const SchduleModal = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const inspectionInputs = [
-    { id: 1, type: "text", label: "full name" },
-    { id: 1, type: "tel", label: "phone number" },
-    { id: 1, type: "email", label: "email address" },
-    { id: 1, type: "date", label: "date" },
-    { id: 1, type: "time", label: "time" },
+    { type: "text", name: "full_name", id: "full_name", label: "full name" },
+    { type: "tel", name: "phone_number", id: "phone_number", label: "phone number" },
+    { type: "email", name: "email_address", id: "email_address", label: "email address" },
+    { type: "date", name: "date", id: "date", label: "date" },
+    { type: "time", name: "time", id: "time", label: "time" },
   ];
-  const [state, handleSubmit] = useForm("xayzqwwn");
+  const [state, handleSubmit] = useForm("xyyaenzj");
+
   if (state.succeeded) {
     return (
-      <p className={`bg-[url('/src/assets/images/hero.jpeg')] w-screen h-screen bg-no-repeat flex-col bg-cover bg-center bg-blend-darken bg-black/70 lg:py-28 md:py-12 pt-12 flex justify-center items-center text-white`}>
+      <div className={`bg-[url('/src/assets/images/hero.jpeg')] fixed  top-0 left-0 w-full h-full bg-no-repeat flex-col bg-cover bg-center bg-blend-darken bg-black/70 lg:py-28 md:py-12 pt-12 flex justify-center items-center text-white`}>
         {" "}
         <img src={Red} alt="" className="w-[200px] mb-20 rounded-full bg-white" />
         <p className="py-6 px-6 bg-white text-center mb-20 text-red-600 rounded-3xl">Thank you for scheduling an inspection, we will be expecting you!!!</p>
-        <button onClick={() => navigate("/")} className="bg-white text-red-600 rounded-lg text-xl py-2 px-6">
+        <button
+          className="bg-white text-red-600 rounded-lg text-xl py-2 px-6"
+          onClick={() => {
+            navigate("/");
+            window.location.reload();
+          }}
+        >
           Continue
         </button>
-      </p>
+      </div>
     );
   }
 
@@ -53,7 +60,7 @@ const SchduleModal = () => {
                     {item.label}
                   </label>{" "}
                   <br />
-                  <input type={item.type} className="border w-full p-2 mt-1 bg-white outline-none" required />
+                  <input type={item.type} name={item.name} id={item.id} className="border w-full p-2 mt-1 bg-white outline-none" required />
                 </div>
               );
             })}

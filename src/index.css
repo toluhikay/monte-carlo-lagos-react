@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "CynthoNextRegular";
-  src: local("Gilroy"), url(./assets/fonts/cyntho-next-cufonfonts/CynthoNextRegular.otf) format("truetype");
+  font-family: "CynthoNextRegular" "CynthoNextBold";
+  src: local("CynthoNextRegular"), url(./assets/fonts/cyntho-next-cufonfonts/CynthoNextRegular.otf) format("truetype");
+  src: local("CynthoNextBold"), url(./assets/fonts/cyntho-next-cufonfonts/CynthoNextExtraBold.otf) format("truetype");
 }
 
 html {
-  font-family: CynthoNextRegular;
+  font-family: CynthoNextRegular, CynthoNextBold;
 }

@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Front from "../assets/images/front1.webp";
-import Valentine from "../assets/images/ValentineMC.jpg";
-import Layout from "../assets/images/layout.jpeg";
+import Valentine from "../assets/images/ValentineMC.webp";
+import Layout from "../assets/images/layout.webp";
 import { yellowColor, redColor, commonStyle } from "../common/commonStyles";
 import { ACTIONBUTTONS } from "../constants/constant";
 import { MdOutlineNavigateNext } from "react-icons/md";
@@ -33,7 +33,7 @@ const MonteCarloSection = () => {
             return (
               <button
                 key={index}
-                className={`md:w-[23%] w-[48%] md:mb-0 mb-6 bg-[${redColor}] flex text-sm justify-center hover:bg-[#e9a921]  items-center capitalize text-white cursor-pointer py-4`}
+                className={`md:w-[23%] w-[48%] md:mb-0 mb-6 bg-[${redColor}] flex md:text-sm text-xs justify-center hover:bg-[#e9a921]  items-center capitalize text-white cursor-pointer py-4`}
                 onClick={() => {
                   if (item.link) {
                     navigate(item.link);

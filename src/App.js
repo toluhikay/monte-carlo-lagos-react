@@ -13,6 +13,8 @@ import PictureModal from "./components/PictureModal";
 import SEO from "./common/seo";
 import ScrollToTop from "./ScrollToTop";
 import DownloadBrochureModal from "./components/downloadModal";
+import { HelmetProvider } from "react-helmet-async";
+import { renderToString } from "react-dom/server";
 
 function App() {
   useEffect(() => {
@@ -26,20 +28,22 @@ function App() {
 
   return (
     <ScrollToTop>
-      <div className=" w-full scroll-smooth overflow-hidden">
-        <PictureModal />
-        <DownloadBrochureModal />
-        <SEO title="Monte Carlo Lagos!" description="A " name="Adozillion Homes" type="website" />
-        <Routes>
-          <Route path="/" element={<Header />}>
-            <Route index element={<LandingPage />} />
-            <Route path="/subscriptionForm" element={<Form />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/post" element={<SingleBlog />} />
-          </Route>
-        </Routes>
-        <Footer />
-      </div>
+      <HelmetProvider>
+        <div className=" w-full scroll-smooth overflow-hidden">
+          <PictureModal />
+          <DownloadBrochureModal />
+          <SEO title="Monte Carlo Lagos!" description="A " name="Adozillion Homes" type="website" />
+          <Routes>
+            <Route path="/" element={<Header />}>
+              <Route index element={<LandingPage />} />
+              <Route path="/subscriptionForm" element={<Form />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/post" element={<SingleBlog />} />
+            </Route>
+          </Routes>
+          <Footer />
+        </div>
+      </HelmetProvider>
     </ScrollToTop>
   );
 }

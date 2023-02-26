@@ -48,10 +48,12 @@ const Footer = () => {
         </div>
         <div className="ml:mb-0 mb-12">
           <p className="mb-3 font-bold">Let's stay in touch</p>
-          <div className="flex items-center mb-5">
-            <input type="email" className="p-2 sm:text-base text-xs " placeholder="enter your email" />
-            <button className="bg-red-800 sm:text-base text-xs p-2">Subscribe</button>
-          </div>
+          <form className="flex items-center mb-5">
+            <input type="email" className="p-2 sm:text-base text-black text-xs outline-none" required placeholder="enter your email" />
+            <button className="bg-red-800 sm:text-base text-xs p-2" type="submit">
+              Subscribe
+            </button>
+          </form>
           <p className="text-xs text-white/50">Keep up to date with our latest news and special offers.</p>
         </div>
       </div>

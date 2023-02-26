@@ -6,7 +6,7 @@ const SingleBlog = () => {
   return (
     <div className="min-h-[700px] flex flex-col justify-center items-center md:py-[150px] py-[100px]">
       <div className="md:w-[50%] w-[80%] flex flex-col items-center">
-        <p className={`text-[${yellowColor}] italic lg:text-5xl md:text-4xl text-3xl capitalize pb-6 text-center`}>{BlogJson[0].title.toLowerCase()}</p>
+        <p className={`text-[${yellowColor}] italic md:text-3xl text-2xl capitalize pb-6 text-center`}>{BlogJson[0].title.toLowerCase()}</p>
         <p className="pb-6 font-extrabold text-[10px]">
           By <span className={`uppercase text-[${redColor}]`}>{BlogJson[0].postOwner} </span> / <span className={`text-[${redColor}]`}> {BlogJson[0].date}</span>
         </p>
