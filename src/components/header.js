@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import MonteCarloLogo from "../assets/images/White.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { commonStyle } from "../common/commonStyles";
+import { Helmet } from "react-helmet-async";
 
 const Header = () => {
   const Links = [
@@ -15,6 +16,12 @@ const Header = () => {
 
   return (
     <Fragment>
+      <Helmet prioritizeSeoTags>
+        <title>Monte Carlo Lagos</title>
+        <meta name="description" content="Monte Carlo Lagos, Beachfront, Real estate, Epe, Estates, Resort, Residences" />
+        <link rel="canonical" href="/" />
+      </Helmet>
+
       <header className={`fixed top-0 left-0 flex md:flex-row flex-col w-full z-[9500]  justify-between items-center ${openNav ? "backdrop-blur-sm  bg-[#c31516]/90" : "backdrop-blur-sm bg-black/50"} ${commonStyle} text-white`}>
         <div className="flex justify-between md:w-auto w-full items-center">
           <Link to={"/"} onClick={() => setOpenNav(false)}>
