@@ -17,10 +17,10 @@ const ThreePictures = () => {
 		{ id: 2, img: Second },
 		{ id: 3, img: Third },
 		{ id: 4, img: Fourth },
-		{ id: 5, img: Fifth },
 		{ id: 6, img: sixth },
-		{ id: 7, img: seventh },
 		{ id: 8, img: first },
+		{ id: 5, img: Fifth },
+		{ id: 7, img: seventh },
 	];
 	const dispatch = useDispatch();
 	return (
